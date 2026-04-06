@@ -1,0 +1,17 @@
+{
+  "name": "serverstatus-worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bash ./scripts/dev-worker.sh",
+    "dev:db:init": "bash ./scripts/dev-db-init.sh",
+    "dev:agent": "bash ./scripts/dev-agent.sh",
+    "dev:doctor": "go version && bun --version && wrangler deploy --dry-run",
+    "deploy": "wrangler deploy",
+    "cf-typegen": "wrangler types"
+  },
+  "devDependencies": {
+    "wrangler": "^4.8.0"
+  }
+}
